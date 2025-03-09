@@ -1,7 +1,7 @@
 # PostgreSQL-Data-Warehouse-Project
 
-# Requirements for this Project
-Building the Data Warehouse 
+## Requirements for this Project
+###Building the Data Warehouse 
 Objective
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
