@@ -22,6 +22,8 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 
 Medallion Architecture is a modern data engineering design pattern used primarily in lakehouse environments, such as those built on Databricks, Delta Lake, or cloud-based data lakes. It follows a layered approach to data organization, improving data quality, governance, and efficiency by structuring data into different tiers: Bronze, Silver, and Gold.
 
+![Data Architecture](documents/Medallion Architecture.png)
+
 1. **The Bronze Layer** is the raw data ingestion layer, where data is collected in its native format from various sources, such as APIs, IoT devices, databases, or logs. This layer ensures data immutability, allowing analysts to trace the original source.
 2. **The Silver Layer** focuses on data cleansing, transformation, and enrichment, eliminating duplicates, handling missing values, and applying schema validation. This layer prepares data for analytical processing.
 3. **The Gold Layer** contains highly refined, business-ready data that is aggregated, structured, and optimized for consumption in reports, dashboards, or machine learning models.
