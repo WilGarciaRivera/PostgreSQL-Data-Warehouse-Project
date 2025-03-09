@@ -1,5 +1,8 @@
 # PostgreSQL-Data-Warehouse-Project
 
+Welcome to this **PostegreSQL Data Warehouse Project**. 
+This repository has all the steps I took to build this project, from data warehouse, the architecture to generating actionable insights. This project highlights some of the best practices I learned in data engineering and data analytics. 
+
 ## Requirements for this Project
 
 ### Building the Data Warehouse 
@@ -24,3 +27,24 @@ Medallion Architecture is a modern data engineering design pattern used primaril
 3. **The Gold Layer** contains highly refined, business-ready data that is aggregated, structured, and optimized for consumption in reports, dashboards, or machine learning models.
 
 By implementing the Medallion Architecture, organizations can enhance data quality, lineage tracking, and query performance while maintaining flexibility. This approach also supports incremental data processing, where updates are seamlessly integrated into the pipeline, making it ideal for real-time analytics and AI-driven insights.
+
+## Project Overview
+
+For this projects the steps involved are:
+
+1. **Data Architecture**: To design a modern data warehouse. For this we will be using the Medallion Architecture, which involves **Bronze**, **Silver** and **Gold** layers.
+2. **ETL Pipelines**: How to extract, transform and load the data from differnce hources into out warehouse.
+3. **Data Modeling**: Develop fact and dimension tables to help with the analytics queries.
+4. **Analytics & Reporting**: Creating reports and/or dashboards for data driven decissions.
+
+In this repository you fill find resources on:
+- SQL Deelopment
+- Data Architecture
+- Data Engineering
+- ETL Pipeline Development
+- Data Modeling
+- Data Analytics
+
+## About me
+
+Hey, my name is **Wil Garcia Rivera**, I have spent the better part of my adult life working in the finance and accounting realm. My main goal is to modernize these financial processes and enhanced them with modern data tools. Please feel free to send me note, lets connect and hopefully grown together in this space.
