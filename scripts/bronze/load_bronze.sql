@@ -40,18 +40,6 @@ Script Purpose:
 
 ===============================================================================
 
-===============================================================================
-Stored Procedure: Load CSV Data into Bronze Tables (with Logging & Error Handling)
-===============================================================================
-Script Purpose:
-    - Automates loading CSV files into the 'bronze' schema.
-    - Truncates the target table before inserting new data.
-    - Logs execution details (start time, end time, duration).
-    - Handles errors and logs failures.
-
-===============================================================================
-*/
-
 */
 
 CREATE OR REPLACE PROCEDURE bronze.load_csv_data(
@@ -108,3 +96,10 @@ EXCEPTION
         RAISE NOTICE 'Error Message: %', SQLERRM;
         RAISE NOTICE '==========================================';
 END $$;
+
+CALL bronze.load_csv_data('crm_sales_details', '/Users/wilfredogarcia/Desktop/Data Warehouse project/CRM/sales_details.csv');
+CALL bronze.load_csv_data('crm_cust_info', '/Users/wilfredogarcia/Desktop/Data Warehouse project/CRM/cust_info.csv');
+CALL bronze.load_csv_data('crm_prd_info', '/Users/wilfredogarcia/Desktop/Data Warehouse project/CRM/prd_info.csv');
+CALL bronze.load_csv_data('erp_cust_az12', '/Users/wilfredogarcia/Desktop/Data Warehouse project/ERP/CUST_AZ12.csv');
+CALL bronze.load_csv_data('erp_loc_a101', '/Users/wilfredogarcia/Desktop/Data Warehouse project/ERP/LOC_A101.csv');
+CALL bronze.load_csv_data('erp_px_cat_g1v2', '/Users/wilfredogarcia/Desktop/Data Warehouse project/ERP/PX_CAT_G1V2.csv');
