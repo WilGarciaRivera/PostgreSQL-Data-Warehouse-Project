@@ -63,17 +63,17 @@ BEGIN
     RAISE NOTICE '------------------------------------------------';
 
     -- Capture Start Time
-    start_time := clock_timestamp();
+start_time := clock_timestamp();
 
     -- Truncate the target table before loading new data
-    RAISE NOTICE '>> Truncating Table: %', table_name;
-    EXECUTE format('TRUNCATE TABLE bronze.%I', table_name);
+RAISE NOTICE '>> Truncating Table: %', table_name;
+EXECUTE format('TRUNCATE TABLE bronze.%I', table_name);
 
     -- Load the CSV data into the truncated table
-    RAISE NOTICE '>> Inserting Data Into: %', table_name;
-    EXECUTE format(
-        'COPY bronze.%I FROM %L WITH (FORMAT csv, HEADER, DELIMITER %L)',
-        table_name, file_path, delimiter
+RAISE NOTICE '>> Inserting Data Into: %', table_name;
+EXECUTE format(
+    'COPY bronze.%I FROM %L WITH (FORMAT csv, HEADER, DELIMITER %L)',
+    table_name, file_path, delimiter
     );
 
     -- Capture End Time
