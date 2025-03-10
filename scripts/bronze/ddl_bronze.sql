@@ -16,6 +16,11 @@ Why Use DO $$?
 	1.	To execute procedural code dynamically without defining a function.
 	2.	To check if a table exists before dropping it, mimicking SQL Server’s OBJECT_ID check.
 	3.	To use control structures like IF, LOOP, and EXCEPTION handling.
+
+CRM_Sales_Details Table
+pgAdim4 did like the way crm_sales_details.csv had the date formated, since it was 20240101 it was reading it
+as a 0. The quuery to create the table I use VARCHAR(50) for now to load it into the table. Reason is we need the 
+Raw data here. We can later during the Silver stage clean those columns and change them to proper date format.
 */
 
 DO $$ 
