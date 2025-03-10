@@ -49,6 +49,10 @@ In this repository you fill find resources on:
 - Data Modeling
 - Data Analytics
 
+## Notion Project
+
+**[Notion Project Steps](https://www.notion.so/PostgreSQL-Data-Warehouse-Project-1b1c5e91e0d680b1b92bd9288f993ef4?pvs=4)**
+
 ## About me
 
 Hey, my name is **Wil Garcia Rivera**, I have spent the better part of my adult life working in the finance and accounting realm. My main goal is to modernize these financial processes and enhanced them with modern data tools. Please feel free to send me note, lets connect and hopefully grown together in this space.
