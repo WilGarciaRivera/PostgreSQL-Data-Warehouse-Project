@@ -28,7 +28,6 @@ Why Use This Procedure?
     4. **Scalable**: Can be used in scheduled jobs for periodic refreshes.
 
 ===============================================================================
-/*
 ===============================================================================
 Stored Procedure: Load CSV Data into Bronze Tables (with Logging & Error Handling)
 ===============================================================================
