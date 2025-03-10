@@ -53,6 +53,11 @@ In this repository you fill find resources on:
 
 **[Notion Project Steps](https://www.notion.so/PostgreSQL-Data-Warehouse-Project-1b1c5e91e0d680b1b92bd9288f993ef4?pvs=4)**
 
+## License
+
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+
+
 ## About me
 
 Hey, my name is **Wil Garcia Rivera**, I have spent the better part of my adult life working in the finance and accounting realm. My main goal is to modernize these financial processes and enhanced them with modern data tools. Please feel free to send me note, lets connect and hopefully grown together in this space.
