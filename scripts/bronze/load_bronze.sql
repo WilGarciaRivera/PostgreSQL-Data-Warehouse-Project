@@ -1,11 +1,11 @@
 /*
 ===============================================================================
-Stored Procedure: Load CSV Data into Bronze Tables
+Stored Procedure: Load CSV Data into Bronze Tables (with TRUNCATE)
 ===============================================================================
 Script Purpose:
     This stored procedure automates the process of loading raw CSV data 
-    into the 'bronze' schema. It dynamically executes the COPY command 
-    to ingest data without requiring manual execution.
+    into the 'bronze' schema. It first truncates the target table 
+    before loading new data using the COPY command.
 
 ===============================================================================
 
@@ -15,16 +15,17 @@ How It Works:
         2. file_path (TEXT)    → Full file path of the CSV to be loaded.
         3. delimiter (CHAR)    → The delimiter used in the CSV (default is ',').
     
-    - The EXECUTE format() function dynamically constructs and runs 
-      the COPY command to load the CSV into the specified table.
+    - The EXECUTE format() function dynamically constructs and runs:
+        1. **TRUNCATE TABLE bronze.table_name** → Clears existing records.
+        2. **COPY FROM CSV** → Loads new data into the truncated table.
 
 ===============================================================================
 
 Why Use This Procedure?
-    1. **Automation**: Eliminates the need for manual COPY statements.
-    2. **Reusability**: Works for any table in the 'bronze' schema.
-    3. **Scalability**: Can be scheduled and extended to handle multiple files.
-    4. **Consistency**: Ensures all CSV loads follow the same structure.
+    1. **Ensures Fresh Data**: Clears old records before every load.
+    2. **Avoids Duplicate Entries**: Prevents duplicate ingestion of records.
+    3. **Automated & Reusable**: Works for all Bronze tables with a single call.
+    4. **Scalable**: Can be used in scheduled jobs for periodic refreshes.
 
 ===============================================================================
 */
@@ -37,6 +38,10 @@ CREATE OR REPLACE PROCEDURE bronze.load_csv_data(
 LANGUAGE plpgsql
 AS $$
 BEGIN
+    -- Truncate the target table before loading new data
+    EXECUTE format('TRUNCATE TABLE bronze.%I', table_name);
+
+    -- Load the CSV data into the truncated table
     EXECUTE format(
         'COPY bronze.%I FROM %L WITH (FORMAT csv, HEADER, DELIMITER %L)',
         table_name, file_path, delimiter
