@@ -53,6 +53,16 @@ In this repository you fill find resources on:
 
 **[Notion Project Steps](https://www.notion.so/PostgreSQL-Data-Warehouse-Project-1b1c5e91e0d680b1b92bd9288f993ef4?pvs=4)**
 
+## Important Links & Tools:
+
+Everything is for Free!
+- **[Datasets](datasets/):** Access to the project dataset (csv files).
+- **[PostgreSQL](https://www.postgresql.org/download/):** PostgreSQL is a powerful, open source object-relational database system.
+- **[pgAdmin](https://www.pgadmin.org/download/):** Graphical user interface (GUI) tool used for managing PostgreSQL.
+- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
+- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
+- **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
