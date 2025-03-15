@@ -63,6 +63,8 @@ Everything is for Free!
 - **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
 - **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
 
+## Repository Structure
+```
 PostgreSQL-Data-Warehouse-Project/
 │
 ├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
